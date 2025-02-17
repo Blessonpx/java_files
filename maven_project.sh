@@ -90,7 +90,22 @@ createSpringProject(){
 EOF
 	mkdir -p src/main/resources
 	echo "# Application properties" > src/main/resources/application.properties
+	path="src/main/java/${groupID_//./\/}/App.java"
+	cat > $path<<EOF
+package ${groupID_}.${artifactID_};
 
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+    }
+}
+EOF
 }
 
 
